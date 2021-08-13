@@ -1,0 +1,34 @@
+version: "3.9"
+    
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - ./starter-theme:/var/www/html/wp-content/themes/starter-theme
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    # command: /bin/sh -c "chown www-data:www-data wp-content wp-content/plugins wp-content/themes && exec apache2-foreground"
+
+
+volumes:
+  db_data: {}
+  wordpress_data: {}
