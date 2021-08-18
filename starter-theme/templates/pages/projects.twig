@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="portfolio-wrapper">
+		{% for post in posts %}
+			<a class="portfolio-item" href="{{ post.link }}">
+					<div class="img-container">
+						<img class="portfolio-thumbnail" src="{{ Image(post.meta('project_icon')).src('thumbnail') }}">
+					</div>
+					<div class="portfolio-description">
+						<h3>{{post.title}}</h3>
+						<p>{{ post.project_description }}</p>
+					</div>
+			</a>
+		{% endfor %}
+	</div><!-- /content-wrapper -->
+{% endblock %}

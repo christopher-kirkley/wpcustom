@@ -3,3 +3,202 @@
  * Description: Starter Theme to use with Timber
  * Author: Upstatement and YOU!
 */
+
+/* reset styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Times New Roman;
+	}
+
+html {
+	font-size: 62.5%;
+}
+
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+p {
+	line-height: 1.6rem;
+	margin-bottom: 1rem;
+}
+
+.header {
+	background-color: #ffcc66;
+	padding: 5rem 8rem 0 8rem;
+}
+
+.hdr-wrapper {
+	display: grid;
+	grid-template-columns: 8fr 1fr;
+	grid-template-rows: 8rem 1fr;
+}
+
+.hdr-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hdr-logo {
+	font-size: 3rem;
+}
+
+.hdr-caption {
+	font-size: 1.5rem;
+}
+
+	.nav-main {
+		grid-row-start: 3;
+		grid-column-start: 3;
+	}
+
+	.nav-list {
+		display: flex;
+		margin-bottom: 1.5rem;
+		gap: 1rem;
+		list-style-type: none;
+	}
+
+	.nav-item {
+		text-transform: uppercase;
+		font-size: 1.3rem;
+	}
+
+
+	.nav-item a:hover{
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+
+.bar {
+    display: block;
+}
+
+.content {
+	padding: 0 8rem 0 8rem;
+	margin-top: 4rem;
+}
+
+.portfolio-wrapper {
+	display: grid;
+	grid-template-columns: minmax(22em, 1fr);
+	margin-top: 1em;
+}
+
+.portfolio-item {
+	display: flex;
+	margin-bottom: 3em;
+}
+
+.portfolio-item:hover {
+	/* background-color: #ffcc66; */
+}
+
+.portfolio-description {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 1rem;
+	min-height: 50px;
+}
+
+.portfolio-description h3 {
+	font-size: 2rem;
+}
+
+.portfolio-description p {
+	font-size: 1.5rem;
+}
+
+.img-container {
+	position: relative;
+}
+
+.portfolio-thumbnail {
+	object-fit: cover;
+	display: block;
+	width: 50px;
+	height: 50px;
+	align-self: center;
+	
+}
+
+.blog-wrapper {
+}
+
+.blog-item {
+	margin-bottom: 4rem;
+
+}
+
+
+.blog-item h3 {
+	font-size: 3rem;
+}
+
+.blog-item h4 {
+	font-size: 1.5rem;
+	color: grey;
+	margin: 1rem auto;
+}
+
+.blog-item .article p {
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	margin: 1rem auto;
+}
+
+.pagination {
+	margin-top: 20px;
+	display: flex;
+	list-style: none;
+}
+
+.page-item {
+}
+
+.page-link {
+	border-color: antiquewhite;
+	color: pink;
+	padding: 0.375rem 0.75rem;
+	border: 1px solid;
+	text-decoration: none;
+	color: pink;
+}
+
+.page-link.active {
+	background-color: pink;
+	color: white;
+}
+
+.page-link.disabled {
+	background-color: white;
+}
+
+
+.page-link:hover {
+	background-color: grey;
+}
+
+.post-image {
+	border: solid;
+}
+
+.footer-wrapper {
+	margin-top: 4em;
+	background-color: #ffcc66;
+	height: 20px;
+}

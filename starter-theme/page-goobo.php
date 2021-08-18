@@ -21,8 +21,21 @@
  * @since    Timber 0.1
  */
 
+global $paged;
+if (!isset($paged) || !$paged){
+    $paged = 1;
+}
+
 $context = Timber::context();
 
+$query = array(
+    'post_type' => 'projects',
+    'orderby' => 'ID',
+    'order' => 'DESC',
+    /* 'posts_per_page' => '2', */
+    /* 'paged' => $paged */
+);
+$context['posts'] = new Timber\Postquery($query);
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render( array( 'pages/projects.twig'), $context );
